@@ -29,6 +29,7 @@ public class Demo {
         for (int i=0 ; i<10 ; i++){
             queue.put(i);
 
+
         }
 
 //        queue.add(11);
