@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05cf8aa5-572f-456e-b7ff-83c5305c7100" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Concurrent-basis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Concurrent-basis.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/concurrent/demo/queue/Demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/concurrent/demo/queue/Demo.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
