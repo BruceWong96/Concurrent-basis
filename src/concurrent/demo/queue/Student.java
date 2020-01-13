@@ -8,6 +8,7 @@ public class Student implements Comparable<Student>{
     public Student(String name, int score) {
         this.name = name;
         this.score = score;
+        
     }
 
     @Override
