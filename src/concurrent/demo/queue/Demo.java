@@ -30,9 +30,7 @@ public class Demo {
             queue.put(i);
         }
 
-//        queue.add(11);
-
-
+//      queue.add(11);
 
         System.out.println(queue.offer(11)); //false
 //        queue.put(11);
@@ -79,7 +77,6 @@ public class Demo {
         BlockingQueue queue1 = new ArrayBlockingQueue<>(10);
         BlockingQueue queue2 = new LinkedBlockingQueue<>();
     }
-
 
     /*
         优先级队列
