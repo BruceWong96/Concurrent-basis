@@ -9,7 +9,6 @@ import java.util.concurrent.ConcurrentHashMap;
     HashMap  线程并发非安全，性能高
     HashTable  线程并发安全，性能低
 
-
     HashTable
     ①底层所有的方法都上锁，包括读方法
     ②HashTable存在锁整表
