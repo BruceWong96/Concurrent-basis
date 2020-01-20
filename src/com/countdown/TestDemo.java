@@ -1,6 +1,7 @@
 package com.countdown;
 
 public class TestDemo {
+
     public static void main(String[] args) {
         new Thread(new BuyGuo()).start();
         new Thread(new BuyCai()).start();
