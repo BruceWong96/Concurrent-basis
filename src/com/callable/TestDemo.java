@@ -1,8 +1,6 @@
 package com.callable;
 
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 /**
  * Callable 是 JDK1.5之后提供的新的线程机制，比Runnable的变化：
@@ -13,9 +11,13 @@ import java.util.concurrent.Executors;
  */
 
 public class TestDemo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
         ExecutorService service = Executors.newCachedThreadPool();
-        service.submit(new c1());
+        Future<String> future = service.submit(new c1());
+
+        //获取对应线程call()的返回值
+        String result = future.get();
+        System.out.println(result);
         service.shutdown();
     }
 }
