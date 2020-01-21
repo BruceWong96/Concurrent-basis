@@ -13,6 +13,13 @@ public class NonLockDemo {
  *  创建重入锁
  *  底层支持两种锁的机制：1.公平锁机制；2.非公平锁机制
  *  参数如果是 false是非公平锁（默认）
+ *
+ *  同步代码块默认就是一种非公平锁
+ *
+ *  注意：使用重入锁，一定要注意锁的释放问题
+ *  需要在finally{lock.unlock}  避免产生死锁
+ *
+ *  官方建议：如果使用非公平锁，用同步代码块
  */
         Lock lock = new ReentrantLock(false);
 
@@ -34,6 +41,7 @@ class WriteRunner implements Runnable{
     public void run() {
         while (true){
 //            synchronized (NonLockDemo.class){
+            try{
                 lock.lock();
                 if (NonLockDemo.name=="李雷"){
                     NonLockDemo.name="韩梅梅";
@@ -42,7 +50,10 @@ class WriteRunner implements Runnable{
                     NonLockDemo.name="李雷";
                     NonLockDemo.gender="男";
                 }
+            }finally {
                 lock.unlock();
+            }
+
 //            }
         }
     }
@@ -60,9 +71,12 @@ class ReadRunner implements Runnable{
     public void run() {
         while (true){
 //            synchronized (NonLockDemo.class){
-            lock.lock();
+            try{
+                lock.lock();
                 System.out.println(NonLockDemo.name+"性别："+NonLockDemo.gender);
-            lock.unlock();
+            }finally {
+                lock.unlock();
+            }
 //            }
 
         }
