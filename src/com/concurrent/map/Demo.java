@@ -1,4 +1,4 @@
-package concurrent.demo.map;
+package com.concurrent.map;
 
 import org.junit.Test;
 

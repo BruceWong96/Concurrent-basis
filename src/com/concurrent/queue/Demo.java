@@ -1,4 +1,4 @@
-package concurrent.demo.queue;
+package com.concurrent.queue;
 
 /*
     学习阻塞队列的使用。

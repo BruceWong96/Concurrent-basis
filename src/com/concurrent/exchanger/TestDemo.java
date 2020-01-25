@@ -1,4 +1,4 @@
-package com.exchanger;
+package com.concurrent.exchanger;
 
 import java.util.concurrent.Exchanger;
 

@@ -1,4 +1,4 @@
-package concurrent.demo.queue;
+package com.concurrent.queue;
 
 public class Student implements Comparable<Student>{
 
