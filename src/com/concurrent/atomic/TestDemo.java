@@ -13,7 +13,9 @@ public class TestDemo {
     public static AtomicInteger i = new AtomicInteger(0);
 
     public static void main(String[] args) throws InterruptedException {
+
         CountDownLatch countDownLatch = new CountDownLatch(2);
+        //传递countDownLatch
         new Thread(new AddRunner1(countDownLatch)).start();
         new Thread(new AddRunner2(countDownLatch)).start();
         countDownLatch.await();
@@ -37,7 +39,7 @@ class AddRunner1 implements Runnable{
             TestDemo.i.getAndIncrement();
         }
         countDownLatch.countDown();
-    }
+    }                                         
 }
 
 
