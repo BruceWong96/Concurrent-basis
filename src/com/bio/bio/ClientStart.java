@@ -1,4 +1,4 @@
-package com.bio;
+package com.bio.bio;
 
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
